@@ -6,26 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <h1>  Grade Finder</h1>
-    <h2>Enter Your Percentage!</h2>
-    num1: <input type="number" id="num1"
+<body><center>
+    <h1>  Grade Finder</h1></center>
+    <h2>Enter Your Marks!</h2>
+    Obtained Marks: <input type="number" id="num1">
+    Total Marks: <input type="number" id="num2">
     <br>
     <button onclick="myfunction()">Result</button>
 
     <script>
     function myfunction(){
     let num1=document.getElementById("num1").value
-    if(num1>=80)
+    let num2=document.getElementById("num2").value
+    let num3=num1/num2*100
+    document.write("Percentage: ",num3)
+
+    if(num3>=80)
     alert("A+ Grade");
     
-    else if(num1>=70 && num1<80)
+    else if(num3>=70 && num3<80)
     alert("A Grade");
 
-    else if(num1>=60 && num1<70)
+    else if(num3>=60 && num3<70)
     alert("B Grade");
 
-    else if(num1>=50 && num1<60)
+    else if(num3>=50 && num3<60)
     alert("C Grade");
 
     else 
